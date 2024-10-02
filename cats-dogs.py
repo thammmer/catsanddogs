@@ -8,7 +8,7 @@ from torch.utils.data import DataLoader
 import torchvision
 import os
 from PIL import Image
-
+#version 1.0
 
 dev =torch.device('cuda' if torch.cuda.is_available else 'cpu')
 transforme=torchvision.transforms.Compose([torchvision.transforms.Resize((224,224)), torchvision.transforms.ToTensor()])
@@ -88,3 +88,7 @@ for epoch in range(num_epoch):
         torch.save(model.state_dict(), 'best_model.pth')
 
 print('Finished Training')
+
+
+def nothing():
+    return 0
